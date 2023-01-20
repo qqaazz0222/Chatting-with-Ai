@@ -1,10 +1,11 @@
 const express = require("express");
 const { Configuration, OpenAIApi } = require("openai");
+const apiKey = require("../keys/api_key.json");
 // import { getCompletion } from "gpt3";
 const router = express.Router();
 
 const configuration = new Configuration({
-    apikey: "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",
+    apikey: apiKey.key,
 });
 // apiKey: process.env.OPENAI_API_KEY,
 const openai = new OpenAIApi(configuration);
